@@ -1,24 +1,7 @@
-# vue-virtual-scroll-list
+# 虚拟列表实现无限加载
+在进行前端业务开发时，很容易遇到需要加载巨大列表的场景，比如微博的信息流、微信的朋友圈和直播平台的聊天框，这些列表通常具有两个显著的特点
 
-## Project setup
-```
-npm install
-```
+- 不能分页
+- 只要用户愿意就可以无限的滚动下去
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+在这种场景下，如果直接加载一个数量级很大的列表，会造成页面假死，使用传统的触底加载能在一定的程度上缓解这种情况，但是在加载到一定量级的元素时，会因为页面同时存在大量的DOM元素而出现过度占用内存、页面卡顿的情况，带来糟糕的用户体验，因此我们必须对这种业务场景做出相应的优化，只加载需要显示的元素是这种情况的唯一解，「虚拟列表」应运而生。
