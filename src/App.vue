@@ -14,7 +14,7 @@ export default {
 <style>
 
 * {
-  font-size: 0;
+  /* font-size: 0; */
   margin: 0;
   padding: 0;
   line-height: 1;

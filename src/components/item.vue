@@ -1,5 +1,6 @@
 <template>
   <li class="item" ref="item">
+    
       <div class="item__wrapper">
           <div class="item__info">
               <img :src="data.avatar" class="item__avatar"/>
@@ -34,6 +35,7 @@ export default {
 .item {
   padding: 11px 20px;
   width: 100%;
+  height: 180px;
   &.is-fixed {
     &__name,
     &__date,
